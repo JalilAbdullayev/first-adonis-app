@@ -19,7 +19,7 @@ export default class Movie {
   }
 
   static async find(slug: string) {
-    if (cache.has(slug)) {
+    if (await cache.has(slug)) {
       return cache.get(slug)
     }
     const md = await MovieService.read(slug)
@@ -28,7 +28,7 @@ export default class Movie {
     movie.summary = md.frontmatter.summary
     movie.slug = slug
     movie.abstract = toHtml(md).contents
-    cache.set(slug, movie)
+    await cache.set(slug, movie)
     return movie
   }
 }
