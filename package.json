@@ -61,6 +61,7 @@
     "@adonisjs/shield": "^8.1.1",
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^3.0.0",
+    "@dimerapp/markdown": "^8.0.1",
     "@vinejs/vine": "^2.1.0",
     "edge.js": "^6.0.2",
     "luxon": "^3.5.0",
